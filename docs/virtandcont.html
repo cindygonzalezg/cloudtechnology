@@ -26,8 +26,33 @@
 			</div>
 		</div>
 	</nav>
-    <!-- END: Navbar -->	
+    <!-- END: Navbar -->
+
+	<!-- Content for page -->
+	<main>
 	<h1>Virtualization and Containerization</h1>
+		Before containerization we used to isolate applications in its own virtual machine.
+
+		<h2>Virtualization:</h2>
+		Virtualization is running applications in one physical hardware.
+		In virtualization you use a hypervisor between the host OS and the guess OS. it provides virtual hardware through these two. Basically, with virtualization you are able to import a guest operating system on top of a host operating system while allowing us to run multiple operating systems on different machines as they ran on the same host.
+
+		We then shifted into because virtualization had some cons that needed to be addressed
+
+		<h2>Containerization:</h2>
+		Containerization brings virtualization to the operating system. With this technique we do not use guest operating systems. Application binaries and libraries run on the host kernel which means that containerization is more convenient and time efficient.
+		Docker containerizes a process or an application by giving it access to a kernel, but isolating it.
+
+		<h2>Similarities and differences</h2>
+		<h3>Similarities:</h3>
+		With either technique you can run multiple applications inside a Host machine
+
+		<h3>Differences:</h3>
+		Containerization tends to be less heavy and faster than virtualization.
+		Containerization does not need a Guest Operating System
+		Virtualization can create many Operating systems in one host machine, while containerization will create multiple containers for each type of application.
+	</main>
+	<!-- End of content -->
 
 <!--	JavaScript Files-->
 	<script src="../js/bootstrap-4.3.1.js"></script>

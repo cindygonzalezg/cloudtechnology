@@ -26,9 +26,25 @@
 			</div>
 		</div>
 	</nav>
-    <!-- END: Navbar -->	
-	<h1>Kubernetes and Docker</h1>
+    <!-- END: Navbar -->
 
+	<!-- Start of Content for pages -->
+	<main>
+	<h1>Kubernetes and Docker</h1>
+		Docker and Kubernetes are both used for containerization. These technologies can be used dependently from one another and that is the reason many people think Docker and Kubernetes are in a competition for popularity, but in reality, many people decide to combine these two technologies to make the most out of the advantages that each has to offer.
+		<h2>How do they compare?</h2>
+		Docker is a software that you can install which allows you to run, create, and manage containers. The applications will run on an OS such that the application is isolated from the rest of the system. You can think of Dockers as an application packager.
+
+		Kubernetes is more like an infrastructure where you can manage multiple containers. These containers can be run across multiple compute nodes such as bare-metal servers or virtual machines. Kubernetes enables you to automate networking, provisioning, security and scaling, which means that your application will be more scalable and will have a higher availability.
+
+		As you can see, these are different technologies and are pretty much impossible to compare since each one serves a different function.
+
+		<h2>How do we use them?</h2>
+		Basically, when you are developing software applications you can use docker containers to build your application into an isolated system. Once these are set, you can use Kubernetes to manage your Docker containers.
+
+		As previously stated, there is no need to use Kubernetes and Docker together, but these two work very efficiently with one another. Docker for example, offers its own orchestration platform for containers, but even Docker itself has implemented Kubernetes distributions when you install Docker desktop. Similarly, Kubernetes can be used with other containerization applications such as rkt, but as of today, Docker and Kubernetes seem to be the perfect and most popular duo.
+
+	</main>
 <!--	JavaScript Files-->
 	<script src="../js/bootstrap-4.3.1.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
