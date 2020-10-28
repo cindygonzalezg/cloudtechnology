@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap-4.3.1.css">
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
 
     <title>Tutorial</title>
 </head>
@@ -26,9 +28,149 @@
 			</div>
 		</div>
 	</nav>
-    <!-- END: Navbar -->	
-	<h1>Docker Tutorial</h1>
+    <!-- END: Navbar -->
+	<main>
+		<div class="cont">
+			<div class="title">
+				<h1 style="font-size: 50px">Docker Tutorial</h1>
+			</div>
+		<div>
+			<h2>
+				Difference between an Image and a Container:
+			</h2>
+			<p>
+				An Image is a read only version of our files. We can imagine it as the original file which has no personal files in it.
+			While a container is a copy of an image. A carbon copy if you want to call it.
+				In the container we can add whatever files we want without harming the original image.
+			</p>
+			<h2>
+				Installing Docker:
+			</h2>
+			<h3>Prerequisites</h3>
+			<p>
+				Windows:
+			</p>
+			<ul>
+				<li>Must have Windows 10 or later, Does not matter if you have the Pro or Home edition</li>
+				<li>
+					Hyper-V and Container Windows features must be enabled
+					<ul>
+						<li>
+							You can find more information on how to enable them <a style="text-decoration: lightblue" href="https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-enabling-hyper-v-for-use-on-windows-10/ba-p/267945">here</a>
+						</li>
+					</ul>
+				</li>
+				<li> For Hyper-V to be enabled you’ll need the following: </li>
+					<ul>
+						<li>64-bit processor (You most probably have this if you bought your computer with the past 5-10 years)
+						</li>
+						<li>
+							4GB system RAM
+						</li>
+						<li>
+							BIOS-level hardware virtualization support, which can be enabled in the BIOS setting.
+						</li>
+					</ul>
+				<li>
+					Up to Date Linux kernel WSL2 Package
+				</li>
+					<ul>
+						<li>
+							You can download the package <a style="text-decoration: lightblue" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">here</a>
+						</li>
+					</ul>
+			</ul>
+			<h3>Installing Docker on Windows</h3>
+			<ol>
+				<li>
+					Double-click Docker Desktop Insstaller.exe to boot up the installer.
 
+					If you haven’t yet, download the <b>Docker Desktop Installer</b> <a style="text-decoration: lightblue" href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">here</a>
+				</li>
+				<li>
+					When prompted, ensure the <b>Enable Hyper-V Windows Feature</b> option is selected on the Configuration Page
+				</li>
+				<li>
+					Follow the instructions on the installation wizard to proceed and finish the installation
+				</li>
+				<li>
+					When prompted that the installation is done, you may click on the <b>Close</b> button.
+				</li>
+			</ol>
+		<h3>Setting up Apache Image</h3>
+			<p>Windows</p>
+			<ol>
+				<li>Press on the “(Windows Icon)”Windows Icon</li>
+				<li>Type in “CMD” and press right click on (img) and select “Run as administrator”</li>
+				<li>After the Command Prompt opens up, type the following command “docker pull ubuntu”</li>
+				<li>Once docker is finished pulling the image, you need to run the image, so we make a
+					container for it. You will do so by typing “docker run -it ubuntu:latest /bin/bash”</li>
+				<li>
+					After the Docker container is set up and running, while in the Ubuntu instance type the command “apt-get update”
+				</li>
+				<li>After the updates for Ubuntu are installed we’ll need to download our
+					Apache web server, we do so by typing “apt-get install apache2”</li>
+				<ol>
+					<li>
+						You will most likely be prompted to type ‘Y’ or ‘N’ make sure to type ‘Y’ as not doing so will prevent you from moving on
+					</li>
+					<li>
+						When prompted with the geographical location
+						type the region your machine currently reside in. <i>My machine was in the US, so I typed in ‘12’</i>
+					</li>
+					<li>
+						You will now be prompted with selecting the time-zone of your machine, type in the time-zone region for your machine.
+						<i>My machine was in the Eastern Standard Time-Zone, so I selected ‘5’</i>
+					</li>
+				</ol>
+					<li>
+						Once Apache2 is all set up we will now need to install our document editor, type in “apt-get install vim”
+					</li>
+					<li>
+						After all is set up, open another command prompt instance
+					</li>
+					<li>
+						Once your command prompt is open, type in “docker ps”
+					</li>
+					<li>
+						Since this our first time using docker you should only see 1 container, but in the instance this isn’t
+						your first time with docker look for the docker container with “ubuntu:latest” in it’s name and copy the container ID.
+					</li>
+					<li>
+						We are now going to make our Apache Web Server Image, type “docker commit container ID new image name”
+					</li>
+					<li>
+						After the commit is set up you may now close the command prompt that was used to run our Ubuntu instance
+					</li>
+					<li>
+						Now it is time to boot up our Apache Web Server. We will do so with this command
+						“docker run -it -p 127.0.0.1:80:80 -v FolderOnMachine:/var/www/html new image name /bin/bash”
+					</li>
+					<ol>
+						<li>
+							Do not set up the folder on your 3D Objects, Desktop, Downloads, Documents, Video, Music, or Pictures directories
+						</li>
+					</ol>
+				<li>After the Apache2 instance boots up, type “cd /var/www/html”</li>
+				<li>To make a index.html file, type “vim index.html”</li>
+				<li>After vim opens, press 'i'</li>
+				<li>Type in basic html site content. Example below:</li>
+				<img src="#" alt="html example here">
+				<li>Press on ‘ESC’ then type “:wq” finally press ‘enter’</li>
+				<li>Type “cd /”</li>
+				<li>Type “etc/init.d/apache2 restart”</li>
+				<p>Your Apache Web Server is now setup!</p>
+			</ol>
+				<h3>Viewing Your Local Website</h3>
+				<p>To view your local server open your browser and type in the IP you input after -p in line 13.
+					By default, it will be ‘127.0.0.1’ Do not type :80:80. Press Enter and you should be able to see your site!</p>
+				<h3>Adding Files to Your Web Server</h3>
+				<p>To add files to your Web Server go to the folder used to host the web server and just add files to the folder. You’ll know you’re in the right place if you see the ‘index.html’ file that we set up from before.</p>
+
+
+		</div>
+		</div>
+	</main>
 <!--	JavaScript Files-->
 	<script src="../js/bootstrap-4.3.1.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
