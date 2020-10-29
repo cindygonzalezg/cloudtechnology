@@ -137,7 +137,7 @@
 						your first time with docker look for the docker container with “ubuntu:latest” in it’s name and copy the container ID.
 					</li>
 					<li>
-						We are now going to make our Apache Web Server Image, type “docker commit container ID new image name”
+						We are now going to make our Apache Web Server Image, type “docker commit &lt;container ID&gt; &lt;new image name&gt;"
 					</li>
 					<li>
 						After the commit is set up you may now close the command prompt that was used to run our Ubuntu instance
@@ -155,7 +155,16 @@
 				<li>To make a index.html file, type “vim index.html”</li>
 				<li>After vim opens, press 'i'</li>
 				<li>Type in basic html site content. Example below:</li>
-				<img src="#" alt="html example here">
+				<p>&lt;html&gt;</p>
+				<p>&emsp;&emsp;&lt;head></p>
+				<p>&emsp;&emsp;&emsp;&emsp;&lt;title>Page Name&lt;/title&gt;</p>
+				<p>	&emsp;&emsp;&lt;/head&gt;</p>
+				<p>	&emsp;&emsp;&lt;body&gt;</p>
+				<p>	&emsp;&emsp;&emsp;&emsp;&lt;h1>Hello world!&lt;/h1&gt;</p>
+				<p>	&emsp;&emsp;&emsp;&emsp;&lt;p>Falalalala these are some words&lt;/p&gt;</p>
+				<p>&emsp;&emsp;&lt;/body></p>
+				<p>&lt;/html></p>
+
 				<li>Press on ‘ESC’ then type “:wq” finally press ‘enter’</li>
 				<li>Type “cd /”</li>
 				<li>Type “etc/init.d/apache2 restart”</li>
