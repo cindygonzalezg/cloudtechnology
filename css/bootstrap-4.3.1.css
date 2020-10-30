@@ -48,6 +48,9 @@ img{
   padding-bottom: 30px;
   padding-top: 10px;
 }
+.hero-image{
+	height: 100vh;
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -90,6 +93,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -4521,7 +4525,7 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 3px solid black;
 }
 
 .navbar-light .navbar-toggler {
@@ -4546,19 +4550,19 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #FFFAED;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #fff;
+  color: #FFFAED;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: #FFFAED;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFAED;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -4569,7 +4573,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
+  border-bottom: 3px solid #FFFAED;
 }
 
 .navbar-dark .navbar-toggler {
@@ -4582,15 +4586,15 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: #FFFAED;
 }
 
 .navbar-dark .navbar-text a {
-  color: #fff;
+  color: #FFFAED;
 }
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-  color: #fff;
+  color: #FFFAED;
 }
 
 .card {
@@ -7831,6 +7835,13 @@ button.bg-dark:focus {
 
 .fixed-bottom {
   position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.hug-bottom {
   right: 0;
   bottom: 0;
   left: 0;
