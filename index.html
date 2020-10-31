@@ -10,13 +10,168 @@
 	
 	
 	<style>
-		h1, .h1{
-			font-size: 4rem;
+		
+		#AboutUsSection h1, #OurSiteSection h1{
+			color: #F5B23B;
+			
+		}
+
+		#AboutUsSection h3{
+			color: #F5B23B;
 		}
 		
-		h2, .h2{
-			font-size: 3rem;
+		@media (min-width: 0px) {
+			#HeaderText{
+				padding-top: 10%;
+			}
+			
+		   #HeaderText  h1{
+				font-size: 2rem;
+			}
+		
+			#HeaderText h2{
+				font-size: 1.5rem;
+			}
+			
+			#AboutUsSection h3{
+				font-size: 2rem;
+			}
+			
+			#HeaderText h5{
+				font-size: 1.5rem;
+			}
+			
+			#HeaderText p{
+				font-size: 3rem;
+			}
+			
+			.page-gap{
+				height: 40vh;
+			}
 		}
+		
+		
+		@media (min-width: 576px) {
+			#HeaderText{
+				padding-top: 10%;
+			}
+			
+		   #HeaderText  h1{
+				font-size: 2.5rem;
+			}
+		
+			#HeaderText h2{
+				font-size: 2rem;
+			}
+			
+			#AboutUsSection h3{
+				font-size: 2rem;
+			}
+			
+			#HeaderText h5{
+				font-size: 1.5rem;
+			}
+			
+			#HeaderText p{
+				font-size: 3rem;
+			}
+			
+			.page-gap{
+				height: 55vh;
+			}
+		}
+
+		@media (min-width: 768px) {
+			#HeaderText{
+				padding-top: 10%;
+			}
+			
+		   #HeaderText  h1{
+				font-size: 3rem;
+			}
+		
+			#HeaderText h2{
+				font-size: 2.5rem;
+			}
+			
+			#AboutUsSection h3{
+				font-size: 2rem;
+			}
+			
+			#HeaderText h5{
+				font-size: 1.5rem;
+			}
+			
+			#HeaderText p{
+				font-size: 4.5rem;
+			}
+			
+			.page-gap{
+				height: 45vh;
+			}
+		}
+
+		@media (min-width: 992px) {
+			#HeaderText{
+				padding-top: 10%;
+			}
+			
+		   #HeaderText  h1{
+				font-size: 3rem;
+			}
+		
+			#HeaderText h2{
+				font-size: 2.5rem;
+			}
+			
+			#AboutUsSection h3{
+				font-size: 2rem;
+			}
+			
+			#HeaderText h5{
+				font-size: 1.5rem;
+			}
+			
+			#HeaderText p{
+				font-size: 5rem;
+			}
+			
+			.page-gap{
+				height: 40vh;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			
+			#HeaderText{
+				padding-top: 10%;
+			}
+			
+			#HeaderText h1{
+				font-size: 4rem;
+			}
+		
+			#HeaderText h2{
+				font-size: 3rem;
+			}
+			
+			#AboutUsSection h3{
+				font-size: 2.5rem;
+			}
+			
+			#HeaderText h5{
+				font-size: 1.5rem;
+			}
+			
+			#HeaderText p{
+				font-size: 6rem;
+			}
+			
+			.page-gap{
+				height: 40vh
+			}
+		}
+		
 		
 		.hero-image{
 			background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('imgs/homePageBackground.png'); 
@@ -25,24 +180,12 @@
 			background-size: cover;
 		}
 		
-		h5, .h5{
-			font-size: 1.5rem;
-		}
+		
 		
 		#AboutUsSection {
 			
 		}
-		
-		#AboutUsSection h1, OurSiteSection h1{
-			color: #F5B23B;
-			
-		}
-		
-		#AboutUsSection h3{
-			color: #F5B23B;
-			font-size: 2.5srem;
-		}
-		
+				
 			
 	</style>
 	
@@ -68,13 +211,13 @@
 		</nav>
 		<!-- END: Navbar -->
 		<div class="container text-center">
-			<div class="row justify-content-center" style="padding-top: 10%;">
+			<div id="HeaderText" class="row justify-content-center" >
 				<div class="col-xl-12" style="text-shadow: 0px 5px 0px #00000029;"><h1>Welcome to our site</h1></div>
-				<div class="col-xl-12" style="font-size: 6rem; text-shadow: 0px 10px 0px #00000029;"><p><strong>Cloud Technology</strong></p></div>
+				<div class="col-xl-12" style="text-shadow: 0px 10px 0px #00000029;"><p><strong>Cloud Technology</strong></p></div>
 				<div class="col-xl-8" style="text-shadow: 0px 5px 0px #00000029;"><h2>Let's bring the world together</h2></div>
 			</div>
-			<div style="height: 40vh"></div>
-			<div class="row justify-content-center hug-bottom">
+			<div class="page-gap"></div>
+			<div class="row justify-content-center">
 				<div class="col-xl-3">
 					<h5><strong>learn about us!</strong></h5>
 					<p><a href="#AboutUsSection"><span><svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="#FFFAED" xmlns="http://www.w3.org/2000/svg">
@@ -92,20 +235,20 @@
 			<div class="col-xl-8"><h1><strong>About Us</strong></h1></div>
 		</div>
 		<div class="row align-items-center">
-			<div class="col-xl-3"><img src="imgs/idoAboutUsPic.jpg" class="img-fluid" alt="Responsive image"></div>
-			<div class="col-xl-1"></div>
-			<div class="col-xl-8">
+			<div class="col-3"><img src="imgs/idoAboutUsPic.jpg" class="img-fluid" alt="Responsive image"></div>
+			<div class="col-1"></div>
+			<div class="col-8">
 				<h3><strong>Ido Tanne</strong></h3>
 				<p>Hey There! I am a Third Year student here at NJIT. I'm currently studying Information Technology with a specialization in Web Applications. At NJIT I am a part of two organizations. The first organization is the NJIT Esports Team, I am the Events Director, Game Manager for Minecraft, and a player on the D2 Valorant team. The second organization is the NJIT Learning Community were I occupy the role of Peer Mentor and, behind the scenes, I am on the Media Committee were I manage the Learning Community Discord. I hope you enjoy our site and hopefully learn a thing or two about cloud technology!</p>
 			</div>
 		</div>
 		<div class="row align-items-center" style="padding-top: 5%">
-			<div class="col-xl-8">
+			<div class="col-8">
 				<h3><strong>Cindy Gonzalez</strong></h3>
 				<p>Hello! I am a student at NJIT. I am currently in my first semester and I am majoring in Human-Computer Interaction. I am very interested in cognitive design and will hopefully be able to pursue this specialization in the upcoming years. I have always loved art and I am a very creative person and I am very excited about being able to implement my passion in the technology field. I am a full-time student and I also tutor middle schoolers at Phillips Academy. I hope you enjoy this site and learn a lot as you click through the pages.</p>
 			</div>
-			<div class="col-xl-1"></div>
-			<div class="col-xl-3"><img src="imgs/cindyAboutUs.jpg" class="img-fluid" alt="Responsive image"></div>
+			<div class="col-1"></div>
+			<div class="col-3"><img src="imgs/cindyAboutUs.jpg" class="img-fluid" alt="Responsive image"></div>
 		</div>
 	</div>
 	
@@ -125,6 +268,8 @@
 			<br>
 		</div>
 	</div>
+	
+	
 	
 		
 
