@@ -57,6 +57,10 @@ img{
 .hero-image{
 	height: 100vh;
 }
+
+footer{
+	background-color: lightgray;
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
