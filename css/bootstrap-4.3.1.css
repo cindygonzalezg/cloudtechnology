@@ -13,15 +13,15 @@
 main{
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(#b1dce9,white);
   font-family: 'Sora', sans-serif;
 }
 .title{
-  text-align: center;
   font-family: 'Commissioner', sans-serif;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #dddbdb;
+  background-image: url("../imgs/blue.jpg");
+  text-align: center;
 }
 .box1{
   display: flex;
@@ -35,7 +35,12 @@ main{
 }
 .cont{
   width: 50%;
+  line-height: 32px;
   margin: auto;
+}
+.cont1{
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .part4{
   flex: 2;

@@ -7,18 +7,119 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap-4.3.1.css">
+	<link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
 
     <title>Data Center</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: "Montserrat";
+		}
+
+		a {
+			text-decoration: none;
+			color: orange;
+		}
+
+		h2 {
+			color: #000;
+			margin: 2rem 0 .5rem;
+			font-size: 1rem;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+
+
+		/***************************           Cards            *******************************/
+
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* see notes below */
+			grid-auto-rows: minmax(200px, auto);
+			grid-gap: 1rem;
+		}
+
+		.card {
+			/*height: 200px;*/
+			/*background: red;*/
+			border: 2px solid #e7e7e7;
+			border-radius: 4px;
+			padding: .5rem;
+			-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+			display: flex;
+			/* -webkit-box-orient: vertical; */
+			/* -webkit-box-direction: normal; */
+			-ms-flex-direction: column;
+			flex-direction: column;
+			position: relative;
+			color: #5d5e5e;
+		} /* li item */
+
+		.thumbnail img {
+			fill: #c7c4c4;
+			height: 135px;
+			opacity: .25;
+			padding: 1.5rem;
+		}
+
+		.card-content {
+			font-size: .75rem;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
+
+		.category {
+			font-size: .75rem;
+			text-transform: uppercase;
+		}
+
+		.category {
+			position: absolute;
+			top: 110px;
+			left: 0;
+			color: #fff;
+			background: #e74c3c;
+			padding: 10px 15px;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		.category__01 {
+			background-color: #9b9865;
+		}
+
+		.category__02 {
+			background-color: #1c1a62;
+		}
+
+
+	</style>
 </head>
 <body>
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light">
-		<div class="container"> <a class="navbar-brand" href="../index.html"><img src="../imgs/siteIcons.svg" alt="" height="35px"></a>
+		<div class="container"> <a class="navbar-brand" href="../index.html"><img style="opacity: 30%" src="../imgs/siteIcons.svg" alt="" height="35px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item"> <a class="nav-link" href="../index.html">Home</a> </li>
-				  	<li class="nav-item active"><a href="#" class="nav-link">Data Center <span class="sr-only">(current)</span></a></li>
+					<li class="nav-item"><a href="../index.html#AboutUsSection" class="nav-link">About</a></li>
+					<li class="nav-item active"><a href="#" class="nav-link">Data Center <span class="sr-only">(current)</span></a></li>
 				 	<li class="nav-item"><a href="kuberdocker.html" class="nav-link">Kuber/Docker</a></li>
 				  	<li class="nav-item"><a href="tutorial.html" class="nav-link">Docker Tutorial</a></li>
 				  	<li class="nav-item"><a href="virtandcont.html" class="nav-link">VirtaCont</a></li>
@@ -28,132 +129,242 @@
 	</nav>
     <!-- END: Navbar -->
 	<main>
+		<div class="title">
+			<h1 style="font-size: 50px" >Data Center</h1>
+		</div>
 		<div class="cont">
-			<div class="title">
-				<h1 style="font-size: 50px" >Data Center</h1>
-			</div>
-			<div class="box1">
-				<div class="part1" style="padding-right: 20px">
-					<h2> What are Data Centers?</h2>
-					<p>	Data Centers are buildings dedicated to hosting numerous computers which we know as a server. Servers have a plethora of capabilities, but when a company has a lot of users they need a lot of servers. Which leads them to purchasing and developing data centers.
+			<div class="#">
+				<div class="part1" style="padding-top: 50px">
+					<h2 style="font-size: 1.25rem"> What are Data Centers?</h2>
+					<p>	Data Centers are buildings dedicated to hosting numerous computers which we know as a servers. Servers have a plethora of capabilities, but when a company has a lot of users they need a lot of servers, this leads them to purchasing and developing data centers.
 					</p>
 				</div>
-				<div class="part2">
-					<img src="../imgs/datacenter.jpg" alt="data">
-				</div>
 			</div>
-			<h2 style="padding-top: 20px">Different types of Data Centers</h2>
-			<div style="padding-top: 20px">
-			<h4>Server Platform</h4>
-			<p>Server platform is the fundamental hardware or software
-				for a system which acts as an engine that drives the server.</p>
-				It is often used synonymously with an operating system.
-				<p>Will usually be the brain or the head of a server</p>
-				<h4>Application Server</h4>
-				<p>Also known as a type of middleware, it occupies a substantial amount of
-					computing region between database servers and the end user, and is commonly
-					used to connect the two.</p>
-					<p>You’ll see this when opening a Google Drive file or looking at videos on YouTube.
-						This does not PLAY videos or sounds
-				</p>
-				<h4>Audio/Video Server</h4>
-				<p>It provides multimedia capabilities to websites by helping the
-					user to broadcast streaming multimedia content.</p>
-					<p>Will play music or videos required for websites.
-				</p>
-				<h4>Chat Server</h4>
-				<p>It serves the users to exchange data in an environment similar
-					to Internet newsgroup which provides real-time discussion capabilities.
-				</p>
-				<p>Slack is a perfect example of this.
-					Omegel is also an example of a server like this. Even Discord.
-				</p>
-				<h4>Fax Server</h4>
-				<p>It is one of the best options for organizations that seek minimum incoming and outgoing telephone resources, but require to fax actual documents.
-				</p>
-				<p>
-					Not used a lot anymore since faxing is an old technology, but these are used to host fax services
-				</p>
-				<h4>FTP Server</h4>
-				<p>It works on one of the oldest of the Internet services, the file transfer protocol. It provides a secure file transfer between computers while ensuring file security and transfer control.
-				</p>
-				<p>
-					AFS is a version of a FTP server. Google drive and OneDrive are also examples of FTP servers
-				</p>
-				<h4>
-					Groupware Server
-				</h4>
-				<p>It is a software designed that enables the users to work together, irrespective of the location, through the Internet or a corporate intranet and to function together in a virtual atmosphere.
-				</p>
-				<p>
-					This is how Google Docs, Google Sheets, Google Slides work
-				</p>
-				<h4>
-					IRC Server
-				</h4>
-				<p>
-					It is an ideal option for those looking for real-time discussion capabilities. Internet Relay Chat comprises different network servers that enable the users to connect to each other through an IRC network.
-				</p>
-				<p>
-					WebEx,Zoom,Skype, and Discord as well work off this server.
-				</p>
-				<h4>List Server</h4>
-				<p>
-					It provides a better way of managing mailing lists. The server can be either open interactive discussion for the people or a one-way list that provides announcements, newsletters or advertising.
-				</p>
-				<p>
-					Highlander Hub, the website we use to present event information, has a feature which uses a List Server for organizations to email their members
-				</p>
-				<h4>
-					Mail Server
+			<h2 style="padding-top: 50px; font-size: 1.25rem">Different types of Data Centers</h2>
+			<p> There are multiple types of Data Centers that are used by companies. Here you will
+			find a full list of types and a corresponding in depth explanation for each one of them:</p>
+		</div>
+		<div style="padding-top: 50px" class="cont1">
+			<section class="cards">
+				<!--   card 1 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/data-searching.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Server Platform</p>
+						<h2>Learn More:</h2>
+						<p>Server platform is the fundamental hardware or software for a system which acts as an engine that drives the server.</p>
+						<p>It is often used synonymously with an operating system.
+							Will usually be the brain or the head of a server</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 2 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/big-data.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Application Server</p>
+						<h2>Explanation:</h2>
+						<p>Also known as a type of middleware, it occupies a substantial amount of computing region between database servers and the end user, and is commonly used to connect the two.</p>
+						<p>You’ll see this when opening a Google Drive file or looking at videos on YouTube. This does not PLAY videos or sounds</p>
+					</div><!-- .card-content -->
 
-				</h4>
-				<p>
-					It transfers and stores mails over corporate networks through LANs, WANs and across the Internet.
-				</p>
-				<p>
-					Gmail, Yahoo Mail, Hotmail, etc. all work off mail servers
-				</p>
-				<h4>News Server</h4>
-				<p>It serves as a distribution and delivery source for many public news groups, approachable over the USENET news network.
-				</p>
-				<p>CNN, FOX, CNBC, The New York Times, Etc. all work off News servers for their sites
-				</p>
-				<h4>Proxy Server
-				</h4>
-				<p>
-					It acts as a mediator between a client program and an external server to filter requests, improve performance and share connections.
+				</article>
+				<!--   card 3 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/migrating.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Audio/Video Server</p>
+						<h2>Read:</h2>
+					<p>It provides multimedia capabilities to websites by helping the user to broadcast streaming multimedia content.</p>
+						<p>Will play music or videos required for websites.</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 4 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/data-server.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Chat Server</p>
+						<h2>About it:</h2>
+					<p>It serves the users to exchange data in an environment similar to Internet newsgroup which provides real-time discussion capabilities.</p>
+						<p>Slack is a perfect example of this. Omegel is also an example of a server like this. Even Discord.</p>
+					</div>
+				</article>
+				<!--   card 5 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/project-management.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Fax Server</p>
+						<h2>More:</h2>
+						<p>It is one of the best options for organizations that seek minimum incoming and outgoing telephone resources, but require to fax actual documents.
+						</p>
+						<p>Not used a lot anymore since faxing is an old technology, but these are used to host fax services
+						</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 6 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/chip.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">FTP Server</p>
+						<h2>Find out more:</h2>
+						<p>It works on one of the oldest of the Internet services, the file transfer protocol. It provides a secure file transfer between computers while ensuring file security and transfer control.
+						</p>
+						<p>AFS is a version of a FTP server. Google drive and OneDrive are also examples of FTP servers
+						</p>
+					</div><!-- .card-content -->
 
-				</p>
-				<p>
-					Some services will require that you connect to a proxy before using the service
-				</p>
-				<h4>Telnet Server</h4>
-				<p>	It enables the users to log on to a host
-					computer and execute tasks as if they are working on a remote computer.</p>
-				<p>	AFS also works like this since you access a Linux instance off the NJIT servers</p>
-				<h4>Virtual Servers</h4>
-				<p>	A virtual server is just like a physical computer because it is committed to an individual customer’s demands, can be individually booted and maintains privacy of a separate computer. Basically, the distance among shared and dedicated (hosting) servers is reduced providing freedom
-					to other customers, at a less cost. Now, it has become omnipresent
-					in the data center.</p>
-				<p>	This has helped companies bring down the cost of work computers,
-					by having beefy servers that can host a large number of virtual machines.</p>
-				<h4>Web Server</h4>
-				<p>It provides static content to a web browser by loading a file from a disk and transferring it across the network to the user’s web browser. This exchange is intermediated by the browser and the server, communicating using HTTP.
-				</p>
-				<p>
-					Other types of servers include Open source servers, Gopher server (like a plain document, similar to
-					WWW and the hypertext being absent), and Name server (applies name-service protocol).
-				</p>
-				<p>
-					Other types of servers include Open source servers, Gopher server (like a plain document, similar to WWW
-					and the hypertext being absent), and Name server (applies name-service protocol).
-				</p>
-				<p>
-					The various servers can be categorized according to their applications. Servers along with managing network resources
-					are also dedicated, i.e., they perform no other task other than their server tasks.
-				</p>
-				<h2>Data in the Cloud</h2>
+				</article>
+				<!--   card 7 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/connector.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Groupware Server</p>
+						<h2>Read:</h2>
+						<p>It is a software designed that enables the users to work together, irrespective of the location, through the Internet or a corporate intranet and to function together in a virtual atmosphere.
+						</p>
+						<p>This is how Google Docs, Google Sheets, Google Slides work
+						</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 8 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/data-management.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">IRC Server</p>
+						<h2>Definition:</h2>
+						<p>It is an ideal option for those looking for real-time discussion capabilities. Internet Relay Chat comprises different network servers that enable the users to connect to each other through an IRC network.
+						</p>
+						<p>WebEx,Zoom,Skype, and Discord as well work off this server.
+						</p></div>
+				</article>
+				<!--   card 9 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/technology.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">List Server</p>
+						<h2>Learn About it:</h2>
+						<p>It provides a better way of managing mailing lists. The server can be either open interactive discussion for the people or a one-way list that provides announcements, newsletters or advertising.
+						</p>
+						<p>Highlander Hub, the website we use to present event information, has a feature which uses a List Server for organizations to email their members
+						</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 10 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/computer.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Mail Server</p>
+						<h2>Explanation:</h2>
+						<p>It transfers and stores mails over corporate networks through LANs, WANs and across the Internet.</p>
+					<p>
+						Gmail, Yahoo Mail, Hotmail, etc. all work off mail servers
+					</p></div><!-- .card-content -->
+
+				</article>
+				<!--   card 11 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/globe.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">News Server</p>
+						<h2>Discover More:</h2>
+						<p>It serves as a distribution and delivery source for many public news groups, approachable over the USENET news network.</p>
+						<p>CNN, FOX, CNBC, The New York Times, Etc. all work off News servers for their sites
+						</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 12 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/hdmi-cable.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Proxy Server</p>
+						<h2>Specifics:</h2>
+						<p>It acts as a mediator between a client program and an external server to filter requests, improve performance and share connections.
+						</p>
+						<p>Some services will require that you connect to a proxy before using the service
+						</p>
+					</div>
+				</article>
+				<!--   card 13-->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/server.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Telnet Server</p>
+						<h2>More:</h2>
+						<p>It enables the users to log on to a host computer and execute tasks as if they are working on a remote computer.
+
+						</p>
+						<p>
+							AFS also works like this since you access a Linux instance off the NJIT servers
+						</p></div><!-- .card-content -->
+
+				</article>
+				<!--   card 14 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/motherboard.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Virtual Servers</p>
+						<h2>Info:</h2>
+						<p>A virtual server is just like a physical computer because it is committed to an individual customer’s demands, can be individually booted and maintains privacy of a separate computer. Basically, the distance among shared and dedicated (hosting) servers is reduced providing freedom to other customers, at a less cost. Now, it has become omnipresent in the data center.
+						</p>
+						<p>
+							This has helped companies bring down the cost of work computers, by having beefy servers that can host a large number of virtual machines.
+						</p>
+					</div><!-- .card-content -->
+				</article>
+				<!--   card 15 -->
+				<article class="card">
+					<picture class="thumbnail">
+						<img class="category__01" src="../imgs/coding.svg" alt="" />
+					</picture>
+					<div class="card-content">
+						<p class="category category__02">Web Server</p>
+						<h2>Simplifying it:</h2>
+						<p>
+							It provides static content to a web browser by loading a file from a disk and transferring it across the network to the user’s web browser. This exchange is intermediated by the browser and the server, communicating using HTTP.
+						</p>
+						<p>
+							Other types of servers include Open source servers, Gopher server (like a plain document, similar to WWW and the hypertext being absent), and Name server (applies name-service protocol).
+						</p>
+						<p>
+							Other types of servers include Open source servers, Gopher server (like a plain document, similar to WWW and the hypertext being absent), and Name server (applies name-service protocol).
+						</p>
+						<p>
+							The various servers can be categorized according to their applications. Servers along with managing network resources are also dedicated, i.e., they perform no other task other than their server tasks.
+						</p>
+					</div>
+				</article>
+			</section>
+		</div>
+		<div class="cont">
+			<div style="padding-top: 50px;padding-bottom: 50px">
+				<h2 style="font-size: 1.25rem">Data in the Cloud</h2>
 				<p>
 					So, the funny thing is… The cloud doesn’t exist. At least not how you think it does. It’s not some alien space craft that hovers around earth that we communicate with in order to run our daily lives. The cloud is a concept for all the servers listed above. By storing your files and running virtual machines off servers that are hosted in data centers, this is what the cloud refers to.
 
