@@ -16,11 +16,12 @@ main{
   font-family: 'Sora', sans-serif;
 }
 .title{
-  text-align: center;
   font-family: 'Commissioner', sans-serif;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: black;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #dddbdb;
+  background-image: url("../imgs/blue.jpg");
+  text-align: center;
 }
 .box1{
   display: flex;
@@ -34,7 +35,8 @@ main{
 }
 .cont{
   width: 50%;
-  margin-left: 10%;
+  line-height: 32px;
+  margin: auto;
 }
 .cont1{
   margin-left: 10%;
