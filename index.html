@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
 	<link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
-	
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&display=swap" rel="stylesheet">
+
 	<style>
 		
 		#AboutUsSection h1, #OurSiteSection h1{
@@ -186,8 +187,20 @@
 		#AboutUsSection {
 			
 		}
-				
-			
+		 {
+			 box-sizing: border-box;
+		 }
+		/* Set additional styling options for the columns*/
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.smt a:hover
+		{
+			color: #602121;
+		}
 	</style>
 	
 
@@ -268,14 +281,47 @@
 			even a tutorial on how to set up docker. We hope that you make the most of the information found here and
 			we invite you to click through the pages to start learning. </p>
 			<br>
+			<br>
 		</div>
 	</div>
 	
 	
 	<!-- Footer -->
-	<footer class="container-fluid justify-content-center">
-		<div class="row justify-content-center">
-			<p>Gonzalez & Tanne 2020</p>
+	<footer>
+			<div style="margin-left: 10%; padding: 40px 0; display: flex " class="footer">
+				<div style="width: 40%">
+					<h4> Contact US</h4>
+					<p> We will be happy to work with you and answer your questions</p>
+				</div>
+				<div style="width: 20%">
+					 <p>Cindy Gonzalez</p>
+					<div style="display: flex">
+						<div>
+							<a class="smt" href="https://github.com/cindygonzalezg"><img style="width: 50px" src="imgs/github.png"></a>
+						</div>
+						<div>
+							<a href="https://www.linkedin.com/feed/"><img style="width: 50px;margin-left: 20px" src="imgs/l.png"></a>
+						</div>
+					</div>
+				</div>
+				<div style="width: 20%">
+					<p>Ido Tanne</p>
+					<div style="display: flex">
+						<div>
+							<a href="https://github.com/itanne99"><img style="width: 50px" src="imgs/github.png"></a>
+						</div>
+						<div>
+							<a href="https://www.linkedin.com/in/ido-tanne-51a4b664/"><img style="width: 50px; margin-left: 20px" src="imgs/l.png"></a>
+						</div>
+					</div>
+				</div>
+				<div style="width: 20%">
+
+				</div>
+			</div>
+		</div>
+		<div style="text-align: center">
+			<p style="margin: 0;padding: 10px 0; font-size: small">&copy;Gonzalez&Tanne</p>
 		</div>
 	</footer>
 	<!-- END: Footer -->
