@@ -64,7 +64,10 @@ img{
 }
 
 footer{
-	background-color: lightgray;
+	background-color: #2b2828;
+    color: white;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  text-transform: uppercase;
 }
 :root {
   --blue: #007bff;
