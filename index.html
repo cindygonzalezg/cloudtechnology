@@ -47,9 +47,6 @@
 				font-size: 3rem;
 			}
 			
-			.page-gap{
-				height: 35vh;
-			}
 		}
 		
 		
@@ -78,9 +75,6 @@
 				font-size: 3rem;
 			}
 			
-			.page-gap{
-				height: 55vh;
-			}
 		}
 
 		@media (min-width: 768px) {
@@ -108,9 +102,6 @@
 				font-size: 4.5rem;
 			}
 			
-			.page-gap{
-				height: 45vh;
-			}
 		}
 
 		@media (min-width: 992px) {
@@ -138,9 +129,6 @@
 				font-size: 5rem;
 			}
 			
-			.page-gap{
-				height: 40vh;
-			}
 		}
 
 		@media (min-width: 1200px) {
@@ -169,11 +157,7 @@
 				font-size: 6rem;
 			}
 			
-			.page-gap{
-				height: 40vh
-			}
 		}
-		
 		
 		.hero-image{
 			background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('imgs/homePageBackground.png'); 
@@ -206,15 +190,34 @@
 
     <title>Home Page</title>
 </head>
-<body>
-	<!-- Navbar -->
-	<div class="hero-image" style="color: #FFFAED;">
-		<nav class="navbar navbar-expand-lg navbar-dark">
-			<div class="container"> <a class="navbar-brand" href="#"><img style="opacity: 60%" src="imgs/siteIcons-white.svg" alt="" height="35px"></a>
+<body data-spy="scroll" data-target=".navbar">
+	<div id="home" class="hero-image" style="color: #FFFAED;">
+		<div class="d-flex flex-column container text-center justify-content-between" style="height: 100vh">
+			<div id="HeaderText" class="row justify-content-center">
+					<div class="col-xl-12" style="text-shadow: 0px 5px 0px #00000029;"><h1>Welcome to our site</h1></div>
+					<div class="col-xl-12" style="text-shadow: 0px 10px 0px #00000029;"><p><strong>Cloud Technology</strong></p></div>
+					<div class="col-xl-8" style="text-shadow: 0px 5px 0px #00000029;"><h2>Let's bring the world together</h2></div>
+			</div>
+			
+			<div class="row justify-content-center">
+				<div class="col-xl-3 ">
+						<h5><strong>learn about us!</strong></h5>
+						<p><a href="#AboutUsSection"><span><svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="#FFFAED" xmlns="http://www.w3.org/2000/svg">
+							  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+							  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+							</svg></span></a>
+						</p>
+					</div>
+			</div>	
+		</div>
+	</div>
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+			<div class="container"> <a class="navbar-brand" href="#"><img src="imgs/siteIcons-white.svg" alt="" height="35px"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item"> <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a> </li>
 						<li class="nav-item"><a href="#AboutUsSection" class="nav-link">About</a></li>
 						<li class="nav-item"><a href="docs/datacenter.html" class="nav-link">Data Center</a></li>
 						<li class="nav-item"><a href="docs/kuberdocker.html" class="nav-link">Kuber/Docker</a></li>
@@ -224,29 +227,9 @@
 				</div>
 			</div>
 		</nav>
-		<!-- END: Navbar -->
-		<div class="container text-center">
-			<div id="HeaderText" class="row justify-content-center" >
-				<div class="col-xl-12" style="text-shadow: 0px 5px 0px #00000029;"><h1>Welcome to our site</h1></div>
-				<div class="col-xl-12" style="text-shadow: 0px 10px 0px #00000029;"><p><strong>Cloud Technology</strong></p></div>
-				<div class="col-xl-8" style="text-shadow: 0px 5px 0px #00000029;"><h2>Let's bring the world together</h2></div>
-			</div>
-			<div class="page-gap"></div>
-			<div class="row justify-content-center">
-				<div class="col-xl-3">
-					<h5><strong>learn about us!</strong></h5>
-					<p><a href="#AboutUsSection"><span><svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="#FFFAED" xmlns="http://www.w3.org/2000/svg">
-						  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-						  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-						</svg></span></a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 	
 	<div class="container" id="AboutUsSection" style="border-bottom: 3px gray solid; padding-bottom: 5%;">
-		<div class="row text-center justify-content-center" style="padding: 5% 0">
+		<div class="row text-center justify-content-center" style="padding: 10% 0 5% 0">
 			<div class="col-xl-8"><h1><strong>About Us</strong></h1></div>
 		</div>
 		<div class="row align-items-center">
@@ -273,15 +256,9 @@
 				<h1>Our Site</h1>
 			</div>
 		</div>
-		<div class="row ">
-			<p>We have researched about multiple topics in technology and we have arranged the information
-			into multiple pages so you can enjoy it, and learn from it in the best way possible.
-				Here you will find information about the cloud,
-			virtualization and containerization techniques, the most relevant technologies being used in today's world, and
-			even a tutorial on how to set up docker. We hope that you make the most of the information found here and
+		<div class="row">
+			<p>We have researched about multiple topics in technology and we have arranged the information into multiple pages so you can enjoy it, and learn from it in the best way possible. Here you will find information about the cloud, virtualization and containerization techniques, the most relevant technologies being used in today's world, and even a tutorial on how to set up docker. We hope that you make the most of the information found here and
 			we invite you to click through the pages to start learning. </p>
-			<br>
-			<br>
 		</div>
 	</div>
 	
@@ -323,6 +300,7 @@
 		<div style="text-align: center">
 			<p style="margin: 0;padding: 10px 0; font-size: small"> &copy;Gonzalez&Tanne</p>
 		</div>
+
 	</footer>
 	<!-- END: Footer -->
 	
